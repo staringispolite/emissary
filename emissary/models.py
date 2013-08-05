@@ -17,12 +17,12 @@ DBSession = scoped_session(sessionmaker(extension=ZopeTransactionExtension()))
 Base = declarative_base()
 
 
-class MyModel(Base):
+class User(Base):
     __tablename__ = 'models'
     id = Column(Integer, primary_key=True)
-    name = Column(Text, unique=True)
-    value = Column(Integer)
+    email = Column(Text, unique=True)
+    password = Column(Text)
 
-    def __init__(self, name, value):
-        self.name = name
-        self.value = value
+    def __init__(self, email, password):
+        self.email = email
+        self.password = password
