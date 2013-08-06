@@ -24,7 +24,6 @@ def usage(argv):
 
 
 def init(argv=sys.argv):
-    print argv
     if len(argv) != 2:
         usage(argv)
     config_uri = argv[1]
