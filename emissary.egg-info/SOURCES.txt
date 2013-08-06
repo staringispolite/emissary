@@ -5,6 +5,7 @@ development.ini
 production.ini
 setup.cfg
 setup.py
+staging.ini
 emissary/__init__.py
 emissary/models.py
 emissary/tests.py
@@ -16,8 +17,11 @@ emissary.egg-info/entry_points.txt
 emissary.egg-info/not-zip-safe
 emissary.egg-info/requires.txt
 emissary.egg-info/top_level.txt
+emissary/api/__init__.py
 emissary/scripts/__init__.py
 emissary/scripts/initializedb.py
+emissary/scripts/script_base.py
+emissary/scripts/test_script.py
 emissary/static/favicon.ico
 emissary/static/footerbg.png
 emissary/static/headerbg.png
