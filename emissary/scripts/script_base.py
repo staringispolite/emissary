@@ -23,7 +23,7 @@ def usage(argv):
     sys.exit(1)
 
 
-def init(argv=sys.argv):
+def setup(argv=sys.argv):
     if len(argv) != 2:
         usage(argv)
     config_uri = argv[1]

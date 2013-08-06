@@ -1,6 +1,6 @@
 from script_base import *
 
-init()
+setup()
 
 def main():
     #write stuff here
