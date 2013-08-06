@@ -18,7 +18,7 @@ Base = declarative_base()
 
 
 class User(Base):
-    __tablename__ = 'models'
+    __tablename__ = 'user'
     id = Column(Integer, primary_key=True)
     email = Column(Text, unique=True)
     password = Column(Text)
