@@ -17,7 +17,7 @@ requires = [
     ]
 
 setup(name='emissary',
-      version='0.0',
+      version='0.1',
       description='emissary',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
@@ -38,7 +38,5 @@ setup(name='emissary',
       entry_points="""\
       [paste.app_factory]
       main = emissary:main
-      [console_scripts]
-      initialize_emissary_db = emissary.scripts.initializedb:main
       """,
       )
