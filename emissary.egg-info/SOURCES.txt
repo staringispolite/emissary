@@ -9,7 +9,6 @@ staging.ini
 emissary/__init__.py
 emissary/models.py
 emissary/tests.py
-emissary/views.py
 emissary.egg-info/PKG-INFO
 emissary.egg-info/SOURCES.txt
 emissary.egg-info/dependency_links.txt
