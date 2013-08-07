@@ -5,11 +5,13 @@ DEPLOY_DIR="/var/www-$1/emissary"
 rsync -qrlpgoDz -c --delete $EXCLUDES --progress $BASEDIR $DEPLOY_DIR
 cd $DEPLOY_DIR
 pwd
-if [ $1 = "staging" ]; then
-  ./runpaste-staging stop
-  ./runpaste-staging start
-else if [ $1 == "production" ]; then
-  ./runpaste stop
-  ./runpaste start
-fi
-fi
+case $1 in
+  staging)
+    ./runpaste-staging stop
+    ./runpaste-staging start
+  ;;
+  production)
+    ./runpaste stop
+    ./runpaste start
+  ;;
+esac

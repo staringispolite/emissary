@@ -13,7 +13,7 @@ case $1 in
     start)
         # start all servers
         for id in $SERVER_IDS; do
-          CMD="pserve --server-name=main --app-name=main --daemon --pid-file=$PID_PATH/emissary$id.pid --log-file=$LOG_PATH/emissary$id.log $INI_FILE start server_id=$id"
+          CMD="pserve --server-name=main --app-name=main --daemon --monitor-restart --pid-file=$PID_PATH/emissary$id.pid --log-file=$LOG_PATH/emissary$id.log $INI_FILE start server_id=$id"
           echo $CMD
           $CMD
         done
