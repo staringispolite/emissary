@@ -8,11 +8,8 @@ from .models import (
     Base,
     )
 
-from .controllers import (
-    Account,
-    Home
-    )
-
+from .controllers.account import Account
+from .controllers.home import Home
 
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
