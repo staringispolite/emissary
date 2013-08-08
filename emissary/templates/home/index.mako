@@ -22,5 +22,38 @@
               </div>
               </div>
 
+</div>
 
+<div style="position:relative">
+<div id="subcontent" style="width:960px;" class="row">
+
+<div class="col-4">
+<div class="thumbnail">
+<img src="http://i.imgur.com/gZCD4CF.png" alt="">
+<div class="caption">
+<h3>Blog</h3>
+<p>...</p>
+</div>
+</div>
+</div>
+
+<div class="col-4">
+<div class="thumbnail">
+<img src="http://i.imgur.com/p24FKxV.jpg" alt="">
+<div class="caption">
+<h3>Blog</h3>
+<p>...</p>
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="thumbnail">
+<img src="http://i.imgur.com/64Lzsbf.jpg" alt="">
+<div class="caption">
+<h3>Blog</h3>
+<p>...</p>
+</div>
+</div>
+</div>
+</div>
 </div>
