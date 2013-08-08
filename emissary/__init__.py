@@ -18,6 +18,8 @@ def main(global_config, **settings):
     print engine
     DBSession.configure(bind=engine)
     Base.metadata.bind = engine
+    here = os.path.dirname(os.path.abspath(__file__))
+    settings['mako.directories'] = os.path.join(here, 'templates')
     config = Configurator(settings=settings)
     config.add_static_view('static', 'static', cache_max_age=3600)
     config.include('pyramid_handlers')
