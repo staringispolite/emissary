@@ -5,6 +5,7 @@ body {
     width: 100%;
     margin: 0;
     height: 100%;
+    font-weight:300;
 }
 html, body, #container { height: 100%; }
 body > #container { height: auto; min-height: 100%; }
@@ -48,6 +49,9 @@ a {
     border-radius: 6px;
     padding:10px 0;
     border:1px white solid;
+    background-color:rgba(0,0,0,0.5);
+    color:white;
+    text-align:center;
 }
 
 /* float clearing for IE7 */

@@ -9,7 +9,9 @@ class Home(BaseController):
 
     @action(renderer='home/index.mako')
     def index(self):
-        return {}
+        sign_up_text = """
+        """
+        return {'description_text': sign_up_text}
 
     def launchrock(request):
         _robots = open(os.path.join(
