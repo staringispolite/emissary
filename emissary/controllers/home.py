@@ -1,13 +1,12 @@
 import os
-from pyramid_handlers import action
-
+from pyramid.view import view_config
 from pyramid.response import Response
 from . import *
 
 here = os.path.dirname(os.path.abspath(__file__))
 class Home(BaseController):
 
-    @action(renderer='home/index.mako')
+    @view_config(route_name='home', renderer='home/index.mako')
     def index(self):
         sign_up_text = """
         """

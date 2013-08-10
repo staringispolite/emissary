@@ -1,3 +1,4 @@
+<%! from pyramid import url %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,14 @@
 <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
 </head>
 <body>
-    <div id="header">Header</div>
+    <div class="navbar navbar-fixed-top">
+        <div class="pull-right container">
+        <ul class="navbar-nav nav">
+            <li><a href="${request.route_url('home')}">About</a></li>
+            <li><a href="/blog">Blog</a></li>
+        </ul>
+    </div>
+    </div>
 ${next.body()}
 </body>
 <div id="#footer">
