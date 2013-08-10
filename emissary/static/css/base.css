@@ -63,6 +63,16 @@ body > #container { height: auto; min-height: 100%; }
     color:white;
     text-align:center;
 }
+#subcontent {
+    width:960px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.submodule {
+    width:300px;
+    float:left;
+    margin:40px 10px;
+}
 
 /* float clearing for IE7 */
 *+html .clearfix{

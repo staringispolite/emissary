@@ -13,7 +13,7 @@
         <div class="pull-right container">
         <ul class="navbar-nav nav">
             <li><a href="${request.route_url('home')}">About</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li><a href="http://www.emissarymed.com/blog">Blog</a></li>
         </ul>
     </div>
     </div>
