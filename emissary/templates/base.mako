@@ -21,10 +21,9 @@ ${next.body()}
 <div id="#footer">
 </div>
 </body>
-<a title="Real Time Analytics" href="http://clicky.com/100642910"><img alt="Real Time Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
 <script type="text/javascript">
 var clicky_site_ids = clicky_site_ids || [];
-clicky_site_ids.push(100642910);
+clicky_site_ids.push(100642908);
 (function() {
       var s = document.createElement('script');
         s.type = 'text/javascript';
@@ -33,7 +32,7 @@ clicky_site_ids.push(100642910);
               ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
 })();
 </script>
-<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100642910ns.gif" /></p></noscript>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100642908ns.gif" /></p></noscript>
 <script type="text/javascript">
 var GoSquared = {};
 GoSquared.acct = "GSN-037009-O";
