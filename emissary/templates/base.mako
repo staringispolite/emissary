@@ -18,8 +18,38 @@
     </div>
     </div>
 ${next.body()}
-</body>
 <div id="#footer">
-    
 </div>
+</body>
+<a title="Real Time Analytics" href="http://clicky.com/100642910"><img alt="Real Time Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+<script type="text/javascript">
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(100642910);
+(function() {
+      var s = document.createElement('script');
+        s.type = 'text/javascript';
+          s.async = true;
+            s.src = '//static.getclicky.com/js';
+              ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100642910ns.gif" /></p></noscript>
+<script type="text/javascript">
+var GoSquared = {};
+GoSquared.acct = "GSN-037009-O";
+(function(w){
+function gs(){
+w._gstc_lt = +new Date;
+var d = document, g = d.createElement("script");
+g.type = "text/javascript";
+g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+var s = d.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(g, s);
+}
+w.addEventListener ?
+w.addEventListener("load", gs, false) :
+w.attachEvent("onload", gs);
+})(window);
+</script>
+    
 </html>
