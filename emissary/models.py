@@ -26,3 +26,11 @@ class User(Base):
     def __init__(self, email, password):
         self.email = email
         self.password = password
+
+class BetaUser(Base):
+    __tablename__ = 'beta_user'
+    id = Column(Integer, primary_key=True)
+    email = Column(Text, unique=True)
+
+    def __init__(self, email):
+        self.email = email

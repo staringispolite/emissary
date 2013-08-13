@@ -1,6 +1,15 @@
 <%inherit file="base.mako" />
 <script>
-E.Track.event('betaSignUp', 'pageView');
+var emailFieldTracked = false;
+$(function() {
+E.Track.vPageView('betaPageView');    
+$('#emailField').keypress(function() {
+    if (!emailFieldTracked) {
+	E.Track.vPageView('betaEmailEntered');    
+	emailFieldTracked = true;
+    }
+});
+});
 </script>
 <div id="hero">
     <div class="wrapper">
@@ -13,9 +22,9 @@ E.Track.event('betaSignUp', 'pageView');
         </p>
         <p><i>Currently in private beta. Sign up for updates:</i></p>
         <div class="input-group">
-            <input type="text" placeholder="Email Address" class="form-control">
+            <input id="emailField" type="text" placeholder="Email Address" class="form-control">
                 <span class="input-group-btn">
-                <button class="btn btn-success" onclick="E.Track.event('betaSignUp', 'submit')"type="button">Go!</button>
+                <button class="btn btn-success" onclick="E.Track.vPageView('betaEmailSubmitted');"type="button">Go!</button>
             </span>
         </div>
     </div>

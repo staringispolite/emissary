@@ -1,18 +1,17 @@
-from pyramid_handlers import action
-
 from pyramid.response import Response
+from pyramid.view import view_config
+from email.utils import parseaddr
 from . import *
-from emissary.lib import account, auth
+
+from emissary.models import BetaUser
 
 class Account(BaseController):
 
-    @action(renderer='json')
+    @view_config(renderer='json', route_name='account', match_param='action=create')
     @api
     def create(self):
-        email = self.request.params.get('email')
-        password = self.request.params.get('password')
-
-    @action(renderer='json')
-    @api
-    def get(self):
-        pass
+        email = parseaddr(self.request.params.get('email'))
+        if email and email[1]:
+            new_user = BetaUser(email[1])
+            DBSession.add(new_user)
+        return True
