@@ -13,7 +13,7 @@
         <div class="input-group">
             <input type="text" placeholder="Email Address" class="form-control">
                 <span class="input-group-btn">
-                <button class="btn btn-success" type="button">Go!</button>
+                <button class="btn btn-success" onclick="E.Track.event('betaSignUp', 'submit')"type="button">Go!</button>
             </span>
         </div>
     </div>
