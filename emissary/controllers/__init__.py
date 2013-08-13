@@ -1,6 +1,9 @@
+import time
 from pyramid_handlers import action
 
 from pyramid.response import Response
+from emissary.models import mc
+from emissary import models
 from emissary.lib import auth
 
 class ApiException(Exception):
@@ -24,11 +27,23 @@ class BaseController(object):
             yield v
 
 def api(f):
-    def _wrap(*args, **kw):
+    def _wrap(context, request):
         try:
-            return {'response': f(*args, **kw)}
+            # rate limit
+            ip = request.remote_addr
+            minute = time.time() // 60
+            key = 'rate_limite_%s_%s' % (ip, minute)
+            rate = models.mc.incr(key)
+            if rate > 200:
+                raise ApiException("Too many requests")
+            if not rate:
+                models.mc.set(key, 1)
+            response = f(context, request)
+            body = response.body
+            response.body = '{"response": %s}' % body
+            return response
         except ApiException, e:
-            return {'response':'', 'error': str(e)}
+            return Response('{"response":"", "error": "%s"}' % str(e))
     return _wrap
 
 def authed_api(f):

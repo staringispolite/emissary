@@ -15,7 +15,7 @@ from zope.sqlalchemy import ZopeTransactionExtension
 
 DBSession = scoped_session(sessionmaker(extension=ZopeTransactionExtension()))
 Base = declarative_base()
-
+mc = None
 
 class User(Base):
     __tablename__ = 'user'
@@ -24,6 +24,7 @@ class User(Base):
     password = Column(Text)
 
     def __init__(self, email, password):
+        print mc
         self.email = email
         self.password = password
 

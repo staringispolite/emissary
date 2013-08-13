@@ -2,18 +2,29 @@
 <script>
 var emailFieldTracked = false;
 $(function() {
-E.Track.vPageView('betaPageView');    
-$('#emailField').keypress(function() {
-    if (!emailFieldTracked) {
-	E.Track.vPageView('betaEmailEntered');    
-	emailFieldTracked = true;
-    }
-});
+    E.Track.event('beta', 'betaPageView');    
+    $('#emailField').keypress(function() {
+        if (!emailFieldTracked) {
+            E.Track.event('beta', 'betaEmailEntered');    
+            emailFieldTracked = true;
+        }
+    });
+    $('#submit').click() {
+        $.post('/account/create', {email: $('#emailField').value()}, function(response) {
+            console.log(response);
+            if (response.response) {
+                console.log('yay');
+            }
+
+
+        });
+    });
 });
 </script>
 <div id="hero">
     <div class="wrapper">
         <h1>Emissary Medical Travel</h1>
+    <div id="signup"
         <p>
         There's a lot of misinformation out there. We can help. We're building a highly-vetted community that only the world's best medical facilities qualify for. We help you every step of the way, from intensive research, to travel booking, and on-the-ground assistance.
         </p>
@@ -24,9 +35,17 @@ $('#emailField').keypress(function() {
         <div class="input-group">
             <input id="emailField" type="text" placeholder="Email Address" class="form-control">
                 <span class="input-group-btn">
-                <button class="btn btn-success" onclick="E.Track.vPageView('betaEmailSubmitted');"type="button">Go!</button>
+                <button class="btn btn-success" id="submit" type="button">Go!</button>
             </span>
         </div>
+    <div id="share">
+    <p>
+    Thank you for your interest. We will send you updates regarding our progress to the e-mail address you provided.
+    </p>
+    <p>
+    Follow us.
+    </div>
+    </div>
     </div>
 </div>
 <%doc>

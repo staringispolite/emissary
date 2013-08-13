@@ -1,4 +1,5 @@
 import os
+import memcache
 
 from pyramid.config import Configurator
 from sqlalchemy import engine_from_config
@@ -24,4 +25,6 @@ def main(global_config, **settings):
     config.scan()
     config.add_route('home', '/')
     config.add_route('account', '/account/{action}')
+    models.mc = memcache.Client([settings['memcached.url']], debug=0)
+
     return config.make_wsgi_app()

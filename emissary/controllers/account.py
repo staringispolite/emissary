@@ -4,14 +4,14 @@ from email.utils import parseaddr
 from . import *
 
 from emissary.models import BetaUser
-
 class Account(BaseController):
 
-    @view_config(renderer='json', route_name='account', match_param='action=create')
-    @api
+    @view_config(renderer='json', route_name='account', match_param='action=create', decorator=api)
     def create(self):
+        email, = self.required_params(['email'])
         email = parseaddr(self.request.params.get('email'))
         if email and email[1]:
             new_user = BetaUser(email[1])
             DBSession.add(new_user)
-        return True
+            return True
+        return False
