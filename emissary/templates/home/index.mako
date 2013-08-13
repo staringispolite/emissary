@@ -1,5 +1,7 @@
 <%inherit file="base.mako" />
-
+<script>
+E.Track.event('betaSignUp', 'pageView');
+</script>
 <div id="hero">
     <div class="wrapper">
         <h1>Emissary Medical Travel</h1>
@@ -18,7 +20,7 @@
         </div>
     </div>
 </div>
-
+<%doc>
 <div id="subcontent" style="width:960px;" class="row">
 
 <div class="submodule">
@@ -50,3 +52,4 @@
 </div>
 </div>
 </div>
+</%doc>
