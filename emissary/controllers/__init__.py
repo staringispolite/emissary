@@ -43,7 +43,7 @@ def api(f):
             response.body = '{"response": %s}' % body
             return response
         except ApiException, e:
-            return Response('{"response":"", "error": "%s"}' % str(e))
+            return Response(body='{"response":"", "error": "%s"}' % str(e), content_type='application/json', charset='UTF-8')
     return _wrap
 
 def authed_api(f):

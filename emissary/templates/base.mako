@@ -8,21 +8,21 @@
 <script src="/static/js/bootstrap.min.js"></script>
 <script src="/static/js/base.js"></script>
 <script src="/static/js/track.js"></script>
+<script src="/static/js/api.js"></script>
 <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
 </head>
 <body>
+<%doc>
     <div class="navbar navbar-fixed-top">
         <div class="pull-right container">
         <ul class="navbar-nav nav">
             <li><a href="${request.route_url('home')}">About</a></li>
             <li><a href="http://www.emissarymed.com/blog">Blog</a></li>
         </ul>
+        </div>
     </div>
-    </div>
+</%doc>
 ${next.body()}
-<div id="#footer">
-</div>
-</body>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

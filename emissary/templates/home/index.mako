@@ -9,28 +9,31 @@ $(function() {
             emailFieldTracked = true;
         }
     });
-    $('#submit').click() {
-        $.post('/account/create', {email: $('#emailField').value()}, function(response) {
-            console.log(response);
+    $('#submit').click(function(){
+        if ($('#emailField').val().length > 9) {
+        E.Api.call('account/create', {email: $('#emailField').val()}, function(response) {
             if (response.response) {
-                console.log('yay');
+                $('#signup').fadeOut(function() {
+                    $('#share').fadeIn();
+                });
             }
-
-
         });
+        } else {
+            console.log('fail');
+        }
     });
 });
 </script>
 <div id="hero">
     <div class="wrapper">
         <h1>Emissary Medical Travel</h1>
-    <div id="signup"
         <p>
         There's a lot of misinformation out there. We can help. We're building a highly-vetted community that only the world's best medical facilities qualify for. We help you every step of the way, from intensive research, to travel booking, and on-the-ground assistance.
         </p>
         <p>
         The result is better care, better price, better experience.
         </p>
+    <div id="signup">
         <p><i>Currently in private beta. Sign up for updates:</i></p>
         <div class="input-group">
             <input id="emailField" type="text" placeholder="Email Address" class="form-control">
@@ -38,14 +41,17 @@ $(function() {
                 <button class="btn btn-success" id="submit" type="button">Go!</button>
             </span>
         </div>
+    </div>
     <div id="share">
     <p>
     Thank you for your interest. We will send you updates regarding our progress to the e-mail address you provided.
     </p>
+    </div>
     <p>
-    Follow us.
-    </div>
-    </div>
+    Find us on:
+    <a href="https://www.facebook.com/EmissaryMed"><img class="social-button" src="static/img/facebookbutton.png"/></a>
+    <a href="https://twitter.com/EmissaryMed"><img class="social-button" src="static/img/twitterbutton.png"/></a>
+    </p>
     </div>
 </div>
 <%doc>
