@@ -11,15 +11,16 @@ $(function() {
     });
     $('#submit').click(function(){
         if ($('#emailField').val().length > 9) {
-        E.Api.call('account/create', {email: $('#emailField').val()}, function(response) {
-            if (response.response) {
-                $('#signup').fadeOut(function() {
-                    $('#share').fadeIn();
-                });
-            }
-        });
+            $('#submit').attr('disabled', 'disabled');
+            E.Api.call('account/create', {email: $('#emailField').val()}, function(response) {
+                $('#submit').removeAttr('disabled');
+                if (response.response) {
+                    $('#signup').fadeOut(function() {
+                        $('#share').fadeIn();
+                    });
+                }
+            });
         } else {
-            console.log('fail');
         }
     });
 });

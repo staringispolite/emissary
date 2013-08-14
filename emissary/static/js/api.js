@@ -8,6 +8,13 @@ E.Api = {
                 error_message.addClass('js-error');
                 error_message.html(response.error);
                 $('body').append(error_message);
+                error_message.fadeIn(function() {
+                    setTimeout(function() {
+                        error_message.fadeOut(function() {
+                            error_message.remove();
+                        });
+                    }, 2500);
+                });
             }
             callback(response);
         });
