@@ -29,42 +29,8 @@ ${next.body()}
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-42247248-1', 'emissarymed.com',
-  {
-      'cookieDomain': 'none'
-  }
-);
+ga('create', 'UA-42247248-1', 'emissarymed.com');
 ga('send', 'pageview');
 
 </script>
-<script type="text/javascript">
-var clicky_site_ids = clicky_site_ids || [];
-clicky_site_ids.push(100642908);
-(function() {
-      var s = document.createElement('script');
-        s.type = 'text/javascript';
-          s.async = true;
-            s.src = '//static.getclicky.com/js';
-              ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-})();
-</script>
-<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100642908ns.gif" /></p></noscript>
-<script type="text/javascript">
-var GoSquared = {};
-GoSquared.acct = "GSN-037009-O";
-(function(w){
-function gs(){
-w._gstc_lt = +new Date;
-var d = document, g = d.createElement("script");
-g.type = "text/javascript";
-g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
-var s = d.getElementsByTagName("script")[0];
-s.parentNode.insertBefore(g, s);
-}
-w.addEventListener ?
-w.addEventListener("load", gs, false) :
-w.attachEvent("onload", gs);
-})(window);
-</script>
-    
 </html>
