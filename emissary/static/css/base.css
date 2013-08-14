@@ -61,6 +61,10 @@ body > #container { height: auto; min-height: 100%; }
 #hero .wrapper h1{
    font-weight:400; 
 }
+#hero .wrapper h4{
+   font-weight:400; 
+    margin:20px 10px;
+}
 #hero .wrapper p{
     margin:20px 10px;
     max-width:720px;

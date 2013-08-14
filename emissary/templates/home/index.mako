@@ -1,7 +1,8 @@
 <%inherit file="base.mako" />
 <div id="hero">
     <div class="wrapper">
-        <h1>Emissary Medical Travel</h1>
+        <h1>Emissary</h1>
+        <h4>Medical Travel You Can Trust</h4>
         <p>
         There's a lot of misinformation out there. We can help. We're building a highly-vetted community that only the world's best medical facilities qualify for. We help you every step of the way, from intensive research, to travel booking, and on-the-ground assistance.
         </p>
