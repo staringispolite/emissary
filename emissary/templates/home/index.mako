@@ -1,30 +1,4 @@
 <%inherit file="base.mako" />
-<script>
-var emailFieldTracked = false;
-$(function() {
-    E.Track.event('beta', 'betaPageView');    
-    $('#emailField').keypress(function() {
-        if (!emailFieldTracked) {
-            E.Track.event('beta', 'betaEmailEntered');    
-            emailFieldTracked = true;
-        }
-    });
-    $('#submit').click(function(){
-        if ($('#emailField').val().length > 9) {
-            $('#submit').attr('disabled', 'disabled');
-            E.Api.call('account/create', {email: $('#emailField').val()}, function(response) {
-                $('#submit').removeAttr('disabled');
-                if (response.response) {
-                    $('#signup').fadeOut(function() {
-                        $('#share').fadeIn();
-                    });
-                }
-            });
-        } else {
-        }
-    });
-});
-</script>
 <div id="hero">
     <div class="wrapper">
         <h1>Emissary Medical Travel</h1>
