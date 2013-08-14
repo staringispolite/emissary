@@ -1,5 +1,3 @@
       [paste.app_factory]
       main = emissary:main
-      [console_scripts]
-      initialize_emissary_db = emissary.scripts.initializedb:main
       
