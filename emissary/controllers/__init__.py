@@ -1,5 +1,4 @@
 import time
-from pyramid_handlers import action
 
 from pyramid.response import Response
 from emissary.models import mc
