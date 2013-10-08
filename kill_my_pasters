@@ -1,2 +1,2 @@
 #!/bin/sh
-ps aux | grep paste | grep development | grep `whoami` | awk '{print $2}' | xargs kill -9
+ps aux | grep pserve | grep development | grep `whoami` | awk '{print $2}' | xargs kill -9

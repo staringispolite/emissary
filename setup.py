@@ -14,6 +14,10 @@ requires = [
     'pyramid_debugtoolbar',
     'zope.sqlalchemy',
     'waitress',
+    'WebTest',
+    'webhelpers',
+    'python-memcached',
+    'mysql-python'
     ]
 
 setup(name='emissary',

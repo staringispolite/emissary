@@ -5,3 +5,7 @@ pyramid_tm
 pyramid_debugtoolbar
 zope.sqlalchemy
 waitress
+WebTest
+webhelpers
+python-memcached
+mysql-python

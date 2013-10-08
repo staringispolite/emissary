@@ -1,8 +1,8 @@
 import time
 import random
+import re
 from Crypto.Cipher import AES
 
-SALT = 'saltyballs'
 SECRET = 'a*NSs09&&}(&*Ans'
 TOKEN_EXPIRE_TIME = 86400 * 90
 
@@ -24,3 +24,9 @@ def decode_token(token):
 
 def validate_token(token):
     pass
+
+def validate_password(p):
+    if len(p) >= 8 and re.search('\d+', p):
+        return True
+    return False
+

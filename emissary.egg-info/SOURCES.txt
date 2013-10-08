@@ -8,7 +8,6 @@ setup.py
 staging.ini
 emissary/__init__.py
 emissary/models.py
-emissary/tests.py
 emissary.egg-info/PKG-INFO
 emissary.egg-info/SOURCES.txt
 emissary.egg-info/dependency_links.txt
@@ -80,3 +79,5 @@ emissary/templates/base.mako
 emissary/templates/mytemplate.pt
 emissary/templates/home/base.mako
 emissary/templates/home/index.mako
+emissary/tests/__init__.py
+emissary/tests/auth.py
