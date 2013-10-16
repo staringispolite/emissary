@@ -25,6 +25,8 @@ def main(global_config, **settings):
   config.scan()
   config.add_route('home', '/')
   config.add_route('account', '/account/{action}')
+  config.add_route('event', '/event/{action}')
+  config.add_route('mobile', '/mobile')
   models.mc = memcache.Client([settings['memcached.url']], debug=0)
 
   return config.make_wsgi_app()

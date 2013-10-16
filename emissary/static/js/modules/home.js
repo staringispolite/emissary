@@ -1,11 +1,20 @@
 Gleebox.require('module', function(M) {
     var module = M.extend({
-        requires: ['login'],
-        template: '<div $clearfix$>asdfasdfasdf</div>',
+        requires: ['loginBox'],
+        template: '<div $clearfix$></div>',
         onRender: function(n) {
-          Gleebox.require('login', function(Login) {
-            var login = Login();
-            n.append(login.node());
+          Gleebox.require('loginBox', function(LoginBox) {
+            var test = new LoginBox();
+            n.append(test.node());
+            Gleebox.eventCenter.barrier('userservice_init', function callback() {
+              Gleebox.userService.bind('user_changed', function(user) {
+                if (user) {
+                  
+                });
+              });
+            });
+
+
           });
         }
     });

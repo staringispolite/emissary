@@ -1,6 +1,6 @@
-Gleebox.require('module', function(M) {
+Gleebox.require('form/formControl', function(M) {
   var module = M.extend({
-    template:'<input type="text" class="form-control">',
+    template:'<input type="%type%" class="form-control"/>',
     onRender: function(n) {
     }
   });

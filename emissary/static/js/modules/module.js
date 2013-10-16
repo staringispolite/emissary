@@ -6,7 +6,6 @@ var module = EventDispatcher.extend({
     onRender: function(node) {
     },
     template: '',
-    templateTokens: {},
     _render: function(tpl) {
         var ret = tpl,
             pat = /\%.*?\%/g,

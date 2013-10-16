@@ -6,10 +6,9 @@ Gleebox = $.extend(Gleebox, {
     modules: {},
     moduleCallbacks: {},
     addModule: function(name, moduleClass) {
-        moduleClass.prototype.name = name.replace('/', '_');
+        moduleClass.prototype.name = name.replace(/\//gi, '_');
         Gleebox.modules[name] = moduleClass;
         var i;
-          console.log(moduleClass.prototype.requires);
         for (i = 0; moduleClass.prototype.requires && i < moduleClass.prototype.requires.length; i ++) {
             Gleebox.require(moduleClass.prototype.requires[i]);
         }
@@ -18,6 +17,7 @@ Gleebox = $.extend(Gleebox, {
                 var cb = Gleebox.moduleCallbacks[name].pop();
                 cb(moduleClass);
             }
+            console.log('added ' + name);
         } else {
             console.log('adding module with no callbacks: ' + name);
         }

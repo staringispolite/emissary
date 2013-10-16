@@ -1,10 +1,13 @@
 import uuid
+import json
 from hashlib import sha512
 
 from sqlalchemy import (
   Column,
   Integer,
   Text,
+  ForeignKey,
+  DateTime,
   )
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -19,7 +22,27 @@ from zope.sqlalchemy import ZopeTransactionExtension
 DBSession = scoped_session(sessionmaker(extension=ZopeTransactionExtension()))
 Base = declarative_base()
 mc = None
+class EventType(Base):
+  __tablename__ = 'event_type'
+  id = Column(Integer, primary_key=True)
+  ident = Column(Text)
+  name = Column(Text)
 
+class Event(Base):
+  __tablename__ = 'event'
+  id = Column(Integer, primary_key=True)
+  event_type_id = Column(Integer, ForeignKey('event_type.id'))
+  user_id = Column(Integer, ForeignKey('user.id'))
+  time = Column(Integer)
+  notes = Column(Text)
+  def __json__(self, request):
+    return {
+        'id': self.id,
+        'event_type_id': self.event_type_id,
+        'user_id': self.user_id,
+        'time': self.time,
+        'notes': json.loads(self.notes),
+        }
 class User(Base):
   __tablename__ = 'user'
   id = Column(Integer, primary_key=True)
