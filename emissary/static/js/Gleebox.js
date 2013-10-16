@@ -9,6 +9,7 @@ Gleebox = $.extend(Gleebox, {
         moduleClass.prototype.name = name.replace('/', '_');
         Gleebox.modules[name] = moduleClass;
         var i;
+          console.log(moduleClass.prototype.requires);
         for (i = 0; moduleClass.prototype.requires && i < moduleClass.prototype.requires.length; i ++) {
             Gleebox.require(moduleClass.prototype.requires[i]);
         }

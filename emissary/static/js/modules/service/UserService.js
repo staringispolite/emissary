@@ -3,8 +3,6 @@ Gleebox.require("service/Service", function(S) {
         currentUser: {},
         setUser: function(data) {
             this.currentUser = data;
-            this.favs = this.currentUser.favs;
-            this.fire('got_favs', instance.favs);
             this.fire('user_changed', data);
         },
         logout: function() {

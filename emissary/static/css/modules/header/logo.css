@@ -1,0 +1,10 @@
+.header_logo {
+    display: inline;
+    float: left;
+    height: 65px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.header_logo:hover {
+    background-color: #DDD;
+}

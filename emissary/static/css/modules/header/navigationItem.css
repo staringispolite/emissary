@@ -1,0 +1,9 @@
+.header_navigationItem {
+    display: inline;
+    float: left;
+    padding: 16px;
+    cursor: pointer;
+}
+.header_navigationItem:hover {
+    background-color: #DDD;
+}
